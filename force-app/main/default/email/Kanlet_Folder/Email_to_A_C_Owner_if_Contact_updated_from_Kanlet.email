@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Updates Notification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            background: #007bff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .logo {
+            max-width: 120px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://kanlet.ai/assets/img/logo_purple.svg" alt="Kanlet.ai Logo" class="logo">
+        <h2>Contact Updates Notification</h2>
+        <p>Hello {!Account.OwnerFullName} ,</p>
+
+        <p>New contact updates have been received from Kanlet. Please review the changes.</p>
+        <p>You can view the updated contacts by clicking the button below:</p>
+        <p><a href="https://kanlet-dev-ed.develop.lightning.force.com/lightning/r/Contact/{!K_Processed_Contact__c.ContactId__c}/view" class="button">View Contact Updates</a></p>
+        <p>If you have any questions or concerns, feel free to contact us.</p>
+        <p>Best regards,<br>Kanlet Team</p>
+    </div>
+</body>
+</html>

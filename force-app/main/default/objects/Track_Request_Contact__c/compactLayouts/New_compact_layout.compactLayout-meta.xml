@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_compact_layout</fullName>
+    <fields>Name</fields>
+    <fields>Track_Request__c</fields>
+    <fields>K_Contact__c</fields>
+    <label>New compact layout</label>
+</CompactLayout>

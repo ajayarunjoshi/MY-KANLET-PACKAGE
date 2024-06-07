@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Kanlet_License__c.IsActive__c</field>
+    </columns>
+    <columns>
+        <field>Kanlet_License__c.Tracking_Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Kanlet_License__c.User_Unique_Id__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Kanlet_License__c.Duration__c</field>
+    </columns>
+    <columns>
+        <field>Kanlet_License__c.Frequency__c</field>
+    </columns>
+    <columns>
+        <field>Kanlet_License__c.Customer_id__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Kanlet_License__c.Contact_Limit__c</field>
+    </columns>
+    <description>Report showing Kanlet Configurations .</description>
+    <format>Tabular</format>
+    <name>Kanlet Configurations Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Kanlet_License__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Kanlet_License__c.Tracking_Start_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Status__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates the status of company (i.e. Target Account, Current Customer, Past Customer, Trail Account)</inlineHelpText>
+    <label>Company Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Target Account</fullName>
+                <default>false</default>
+                <label>Target Account</label>
+            </value>
+            <value>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+                <label>Current Customer</label>
+            </value>
+            <value>
+                <fullName>Past Customer</fullName>
+                <default>false</default>
+                <label>Past Customer</label>
+            </value>
+            <value>
+                <fullName>Trail Account</fullName>
+                <default>false</default>
+                <label>Trail Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

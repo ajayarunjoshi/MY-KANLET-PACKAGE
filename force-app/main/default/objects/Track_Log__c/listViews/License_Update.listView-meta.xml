@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_Update</fullName>
+    <columns>NAME</columns>
+    <columns>API_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Request__c</columns>
+    <columns>Response__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>API_Type__c</field>
+        <operation>equals</operation>
+        <value>Config_Update</value>
+    </filters>
+    <label>Config Update Logs</label>
+</ListView>

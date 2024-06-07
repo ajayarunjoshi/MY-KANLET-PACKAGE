@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <apiVersion>60.0</apiVersion>
+    <dynamicChoiceSets>
+        <name>FrequencySet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Frequency__c</picklistField>
+        <picklistObject>Contact_Update__mdt</picklistObject>
+    </dynamicChoiceSets>
+    <dynamicChoiceSets>
+        <name>ReqUpdatesSet</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Required_Updates__c</picklistField>
+        <picklistObject>Contact_Update__mdt</picklistObject>
+    </dynamicChoiceSets>
+    <environments>Default</environments>
+    <interviewLabel>Kanlet Admin Concole {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Kanlet Admin Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Get_Contact_Updates_Mdt</name>
+        <label>Get Contact Updates Mdt</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Admin_Console</targetReference>
+        </connector>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Contact_Update__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Admin_Console</name>
+        <label>Admin Console</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>RequiredUpdates</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Annual Limit&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Contact_Updates_Mdt.Daily_Limit__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Frequency&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;{!Get_Contact_Updates_Mdt.Frequency__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Required Updates&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Joined</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <elementReference>Get_Contact_Updates_Mdt.Joined__c</elementReference>
+            </defaultValue>
+            <fieldText>Joined</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Left</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <elementReference>Get_Contact_Updates_Mdt.Left__c</elementReference>
+            </defaultValue>
+            <fieldText>Left</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Promoted</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <elementReference>Get_Contact_Updates_Mdt.Promoted__c</elementReference>
+            </defaultValue>
+            <fieldText>Promoted</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Switched</name>
+            <dataType>Boolean</dataType>
+            <defaultValue>
+                <elementReference>Get_Contact_Updates_Mdt.Switched__c</elementReference>
+            </defaultValue>
+            <fieldText>Switched</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+        </fields>
+        <nextOrFinishButtonLabel>Done</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact_Updates_Mdt</targetReference>
+        </connector>
+    </start>
+    <status>Obsolete</status>
+</Flow>

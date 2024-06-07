@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Response Email</name>
+    <style>none</style>
+    <subject>Contacts Processed from Kanlet</subject>
+    <textOnly>API Response Notification
+
+API Response Notification
+
+Hello {!User.Name},
+
+The API response has been received. Please check the Processed Contacts for further updates.
+
+If you have any questions or need further assistance, please feel free to contact us.
+
+Regards,
+Kanlet Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_status_back</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(PRIORVALUE(Request_Status__c), &quot;In Progress&quot;),
+    ISPICKVAL(Request_Status__c, &quot;In Preparation&quot;)
+)</errorConditionFormula>
+    <errorDisplayField>Request_Status__c</errorDisplayField>
+    <errorMessage>Status cannot revert back from  &apos;In Progress&apos; to &apos;In Preparation&apos;.</errorMessage>
+</ValidationRule>

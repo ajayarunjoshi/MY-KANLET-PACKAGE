@@ -1,0 +1,16 @@
+<!-- selectContacts.html -->
+<template>
+    <lightning-card title="All Contacts">
+        <div class="slds-m-around_medium">
+            <lightning-button label="Show Contacts" onclick={fetchContacts} variant="brand"></lightning-button>
+        </div>
+        <template if:true={contacts}>
+            <lightning-datatable
+                key-field="Id"
+                data={contacts}
+                columns={columns}
+                hide-checkbox-column="true">
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

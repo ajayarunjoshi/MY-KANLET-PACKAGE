@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Left_Contacts</fullName>
+    <columns>NAME</columns>
+    <columns>First_Name__c</columns>
+    <columns>Last_Name__c</columns>
+    <columns>Company__c</columns>
+    <columns>Job_Title__c</columns>
+    <columns>New_Company__c</columns>
+    <columns>New_Designation__c</columns>
+    <columns>New_Email_Id__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contact_Status__c</field>
+        <operation>equals</operation>
+        <value>Left</value>
+    </filters>
+    <label>Left Contacts</label>
+</ListView>

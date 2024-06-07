@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>K_Processed_Contact__c.First_Name__c</field>
+    </columns>
+    <columns>
+        <field>K_Processed_Contact__c.Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>K_Processed_Contact__c.Company__c</field>
+    </columns>
+    <columns>
+        <field>K_Processed_Contact__c.Company_Website__c</field>
+    </columns>
+    <columns>
+        <field>K_Processed_Contact__c.Job_Title__c</field>
+    </columns>
+    <columns>
+        <field>K_Processed_Contact__c.Contact_Status__c</field>
+    </columns>
+    <description>Report Showing New Leads generated from Kanlet</description>
+    <filter>
+        <criteriaItems>
+            <column>K_Processed_Contact__c.Action_Taken__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Create Lead</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>K_Processed_Contact__c.Action_Taken__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NO. Of Lead Created</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$K_Processed_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>K_Processed_Contact__c.Action_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

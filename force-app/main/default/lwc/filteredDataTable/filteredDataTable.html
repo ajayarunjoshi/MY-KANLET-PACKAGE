@@ -1,0 +1,66 @@
+<template>
+    <lightning-card>
+        <div class="slds-scrollable" style="padding: 1rem;">
+
+            <!-- Account Table -->
+            <template if:true={showAccountTable}>
+                <div class="iconBlock">
+                    <lightning-icon icon-name="standard:account" size="medium"></lightning-icon>
+                    <span>&nbsp;&nbsp;<b>Select Accounts</b></span></br></br>
+                </div>
+                <div style="display:flex;width:50%;">
+                    <lightning-combobox label="Industry" name="Industry" variant="label-stacked"
+                                        placeholder="Select Industry" value={IndustryValue} options={IndustryOptions}
+                                        onchange={handleIndustryChange} style="width:30%;">
+                    </lightning-combobox> &nbsp;&nbsp;
+
+                    <lightning-combobox label="Region" name="Region" variant="label-stacked"
+                                        placeholder="Select Region" value={RegionValue} options={RegionOptions}
+                                        onchange={handleRegionChange} style="width:30%;">
+                    </lightning-combobox>&nbsp;&nbsp;
+                    <lightning-input label="Owner Name" value={OwnerNameValue} onchange={handleOwnerNameChange} style="width: 80%;"></lightning-input>&nbsp;&nbsp;
+                    <lightning-input label="Account Name" value={AccountNameValue} onchange={handleAccountNameChange} style="width: 80%;"></lightning-input>
+                    
+                </div><br>
+                <div style="height: 300px;">
+                    <lightning-datatable 
+                        data={accounts} 
+                        columns={accountColumns} 
+                        key-field="Id" 
+                        onrowselection={handleRowSelection} 
+                        row-selection
+                    ></lightning-datatable>
+                </div>
+                <div class="slds-card__footer" style="padding-top: 1rem;">
+                    <button class="slds-button slds-button_brand" onclick={handleNext}>Next</button>
+                </div>
+            </template>
+
+            <!-- Contact Table -->
+            <template if:true={showContactTable}>
+                <div class="iconBlock">
+                    <lightning-icon icon-name="standard:contact" size="medium"></lightning-icon>
+                    <span>&nbsp;&nbsp;<b>Select Contacts</b></span></br></br>
+                </div>
+                <div style="padding-bottom: 1rem;">
+                    <div style="height: 300px;">
+                        <lightning-card>
+                            <lightning-datatable 
+                                data={contacts} 
+                                columns={contactsColumns} 
+                                key-field="Id" 
+                                onrowselection={handleContactRowSelection} 
+                                row-selection
+                            ></lightning-datatable></br></br>
+
+                            <div style="display: flex;" class="slds-float_right">
+                                <lightning-button label="Back" name="back" variant="brand-outline" onclick={handleback}></lightning-button> &nbsp;
+                                <lightning-button label="Save" variant="brand" name="save" onclick={handleSave}></lightning-button>
+                            </div>
+                        </lightning-card>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

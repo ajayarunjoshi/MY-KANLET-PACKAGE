@@ -1,0 +1,51 @@
+<template>
+    <template if:true={kanletData}>
+        <lightning-card>
+            <article class="slds-card">
+                <div style="margin-top: -16px;height: 72px;" class="slds-grid slds-einstein-header slds-card__header">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                            <div class="slds-media__figure">
+                                <span class="slds-icon_container slds-icon-utility-salesforce1">
+                                    <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#salesforce1"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="slds-media__body">
+                                <h2 class="slds-truncate" title="Einstein (10+)">
+                                    <span class="slds-text-heading_small"> <b>Contact Tracking </b> </span>
+                                </h2>
+                            </div>
+                        </div>
+                        <!-- Move the approval icon here -->
+                        <div style="position: absolute; top: 10px; right: 10px;">
+                            <template if:false={Action_Taken}>
+                                <lightning-icon icon-name="action:approval" size="small" alternative-text="Indicates approval" class="status-icon"></lightning-icon>
+                            </template>
+                        </div>
+                    </header>
+                </div>
+            </article>
+            <div style="list-style: none;  position: relative; text-align: left;">
+                <div style="margin-top: 15px;">
+                   
+                    <div style="margin-bottom: 10px;">
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: inline-block; background-color: #F7AED2; padding: 5px 10px; border-radius: 5px; margin-left: 10px;">
+                                <span style="font-weight: bold; color: #333;">Previous</span>
+                            </div>
+                            <span style="color: #333; margin-left:8px;"> {Job_Title} at {Company}</span>
+                        </div>
+                        <div style="display: inline-block; background-color: #B3C6F8; padding: 5px 10px; border-radius: 5px; margin-left: 10px; width: 73px;">
+                            <span style="font-weight: bold; color: #333;margin-left: 10px;">Now</span>
+                        </div>
+                        <template if:true={New_Company}>
+                            <span style="color: #333; margin-left: 8px;"> {New_Designation} at {New_Company}</span>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+</template>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comapany_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Company Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Target Account</fullName>
+                <default>false</default>
+                <label>Target Account</label>
+            </value>
+            <value>
+                <fullName>Past Customer</fullName>
+                <default>false</default>
+                <label>Past Customer</label>
+            </value>
+            <value>
+                <fullName>Current Customer</fullName>
+                <default>false</default>
+                <label>Current Customer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

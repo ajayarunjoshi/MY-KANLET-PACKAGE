@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Track_Request__c</entityName>
+    <fieldName>Request_Status__c</fieldName>
+    <masterLabel>Sync Request Path</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://kanlet-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFbn00000084pe&amp;amp;feoid=Info&amp;amp;refid=0EMbn000000UNdV&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>Cancelled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://kanlet-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFbn00000084GB&amp;amp;feoid=Info&amp;amp;refid=0EMbn0000014kGb&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>In Preparation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;img src=&quot;https://kanlet-dev-ed.develop.file.force.com/servlet/rtaImage?eid=1CFbn00000084GA&amp;amp;feoid=Info&amp;amp;refid=0EMbn000000ULAH&quot;&gt;&lt;/img&gt;&lt;/p&gt;</info>
+        <picklistValueName>In Progress</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

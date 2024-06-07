@@ -1,0 +1,44 @@
+.slds-card-custom {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #d8dde6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slds-box {
+    padding: 1rem;
+}
+
+.slds-m-bottom_medium {
+    margin-bottom: 1rem;
+}
+
+.slds-badge {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.slds-theme_warning {
+    background-color: #f2d600;
+    color: #333333;
+}
+
+.slds-theme_info {
+    background-color: #0070d2;
+    color: #ffffff;
+}
+
+.slds-grid_vertical-align-center {
+    align-items: center;
+}
+
+.slds-col {
+    padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+    .slds-col {
+        padding: 0;
+    }
+}

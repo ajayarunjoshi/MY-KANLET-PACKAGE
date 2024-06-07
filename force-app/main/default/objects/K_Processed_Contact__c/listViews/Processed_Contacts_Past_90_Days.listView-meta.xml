@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processed_Contacts_Past_90_Days</fullName>
+    <columns>NAME</columns>
+    <filterScope>Mine</filterScope>
+    <label>Processed Contacts Past 90 Days</label>
+</ListView>

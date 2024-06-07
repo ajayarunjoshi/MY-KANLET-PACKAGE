@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Kanlet Data" class="slds-card-custom">
+        <div class="slds-p-around_medium">
+           
+                    <div key={event.Id} class="slds-box slds-m-bottom_medium slds-grid slds-grid_vertical-align-center">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-m-bottom_small">
+                                <span class="slds-badge slds-theme_warning">Previously</span>
+                            </div>
+                            <span style="color: #333; margin-left:8px;">{Job_Title} at {Company}</span>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-m-bottom_small">
+                                <span class="slds-badge slds-theme_info">Now</span>
+                            </div>
+                            <span>{New_Designation} at {New_Company}</span>
+                        </div>
+                    </div>
+                
+        </div>
+    </lightning-card>
+</template>
